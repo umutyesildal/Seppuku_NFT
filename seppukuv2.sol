@@ -15,14 +15,16 @@ contract Seppuku is ERC721, ERC721URIStorage, Pausable, Ownable, ERC721Burnable 
     uint256 public_mint_cost = 0.01 ether;
     uint256 max_supply = 10;
     uint256 max_mint_amount = 5;
-
+    string public baseURI = "https://ipfs.io/ipfs/QmP6jMU6rKiiAwv8cc4o7XZSJgCEnw9hysrAaKVfvFX1He/";
     Counters.Counter private _tokenIdCounter;
 
     constructor() ERC721("Seppuku", "SPK") {}
 
-        function _baseURI() internal pure override returns (string memory) {
-        return "https://ipfs.io/ipfs/QmaTecPSAMEgEUTeCM36vCn597MLVV4DBC5qRzwpkrzqRX/";
+    function _baseURI() internal view virtual override returns (string memory) 
+    {
+        return baseURI;
     }
+
 
     function pause() public onlyOwner {
         _pause();
@@ -52,12 +54,13 @@ contract Seppuku is ERC721, ERC721URIStorage, Pausable, Ownable, ERC721Burnable 
         super._burn(tokenId);
     }
 
-    function tokenURI(uint256 tokenId)
-        public
-        view
-        override(ERC721, ERC721URIStorage)
-        returns (string memory)
+
+    function tokenURI(uint256 tokenId) public view override(ERC721, ERC721URIStorage) returns (string memory) 
     {
-        return super.tokenURI(tokenId);
+        string memory base = _baseURI();
+
+        return string(abi.encodePacked(base, tokenId, ".json"));
+        
     }
+
 }

@@ -21,7 +21,7 @@ contract Seppuku is ERC721, ERC721URIStorage, Pausable, Ownable, ERC721Burnable 
     constructor() ERC721("Seppuku", "SPK") {}
 
         function _baseURI() internal pure override returns (string memory) {
-        return "https://ipfs.io/ipfs/QmeSjSinHpPnmXmspMjwiXyN6zS4E9zccariGR3jxcaWtq/";
+        return "https://gateway.pinata.cloud/ipfs/QmaTecPSAMEgEUTeCM36vCn597MLVV4DBC5qRzwpkrzqRX/";
     }
 
     function pause() public onlyOwner {
