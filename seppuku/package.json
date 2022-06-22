@@ -1,6 +1,5 @@
 {
-  "name": "seppuku",
-  "version": "0.1.0",
+  "name": "seppukuDapp",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,24 +8,26 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@nomiclabs/hardhat-ethers": "^2.0.6",
-    "@nomiclabs/hardhat-waffle": "^2.0.3",
-    "@openzeppelin/contracts": "^4.6.0",
-    "chai": "^4.3.6",
-    "dotenv": "^16.0.1",
-    "ethereum-waffle": "^3.4.4",
-    "ethers": "^5.6.8",
-    "hardhat": "^2.9.7",
-    "next": "12.1.6",
-    "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "@alch/alchemy-web3": "^1.1.8",
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@openzeppelin/contracts": "^4.3.2",
+    "chai": "^4.3.4",
+    "dotenv": "^10.0.0",
+    "embla-carousel-react": "^6.0.1",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.5.1",
+    "hardhat": "^2.6.8",
+    "next": "12.0.3",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@nomiclabs/hardhat-etherscan": "^3.0.4",
-    "autoprefixer": "^10.4.7",
-    "eslint": "8.16.0",
-    "eslint-config-next": "12.1.6",
-    "postcss": "^8.4.14",
-    "tailwindcss": "^3.0.24"
+    "@nomiclabs/hardhat-etherscan": "^2.1.7",
+    "autoprefixer": "^10.4.0",
+    "eslint": "7.32.0",
+    "eslint-config-next": "12.0.3",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.19"
   }
 }
